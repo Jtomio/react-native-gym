@@ -27,7 +27,7 @@ export function SignIn() {
         <Image
           source={BackgroundImg}
           defaultSource={BackgroundImg}
-          alt="Pessos treinando"
+          alt="Pessoas treinando"
           resizeMode='contain'
           position='absolute'
         />
