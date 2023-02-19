@@ -6,6 +6,8 @@ import { FlatList, Heading, HStack, Text, VStack } from "native-base"
 import { ExerciseCard } from '@components/ExerciseCard'
 import { useNavigation } from '@react-navigation/native'
 import { AppNavigationRoutesProps } from '@routes/app.routes'
+import { AppError } from '@utils/AppError'
+import { err } from 'react-native-svg/lib/typescript/xml'
 
 export function Home() {
 
@@ -17,6 +19,15 @@ export function Home() {
 
   function handleOpenExerciseDetails() {
     navigation.navigate('exercise')
+  }
+
+  async function fetchGroups() {
+    try {
+
+    } catch (error) {
+      const isAppError = error instanceof AppError
+      const title = isAppError ? error.message : 'Não foi possível carregar os grupos musculares.'
+    }
   }
 
 
