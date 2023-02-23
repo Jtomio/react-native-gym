@@ -123,6 +123,10 @@ export function Profile() {
     }
   }
 
+  function updateUserProfile(userUpdated: UserDTO) {
+    throw new Error('Function not implemented.')
+  }
+
   async function handleProfileUpdate(data: FormDataProps) {
     try {
       setUpdating(true)
@@ -277,6 +281,4 @@ export function Profile() {
   )
 }
 
-function updateUserProfile(userUpdated: UserDTO) {
-  throw new Error('Function not implemented.')
-}
+
